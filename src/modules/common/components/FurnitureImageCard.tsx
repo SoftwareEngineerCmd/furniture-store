@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { FurnitureEnum } from "./models/furniture.enum";
 import {
   Card,
@@ -39,9 +39,9 @@ export const FurnitureImageCard: FC<FurnitureImageCardProps> = ({
           </Tooltip>
           <Typography variant="body2" align="center">
             {state === FurnitureEnum.SALE ? (
-              <>
+              <Fragment>
                 <s>{price}</s> {salePrice}
-              </>
+              </Fragment>
             ) : (
               price
             )}
